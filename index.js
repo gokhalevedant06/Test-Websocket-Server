@@ -10,7 +10,10 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  console.log('User Connected',socket);
+  console.log('User Connected');
+  socket.on("hello", (...args) => {
+    console.log("HELLO);
+  });
 });
 
 server.listen(process.env.PORT || 3000, () => {
