@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
   console.log('User Connected');
   socket.on("hello", (...args) => {
-    console.log("HELLO);
+    console.log("HELLO");
   });
 });
 
